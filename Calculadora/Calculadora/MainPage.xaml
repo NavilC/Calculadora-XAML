@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Calculadora.ViewModels"
+             x:Class="Calculadora.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModelCalculadora></local:ViewModelCalculadora>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="operaciones matematicas con 2 numeros"  Padding="30,10,30,10"/>
+        <Entry  Text="{Binding PrimerNumero}" Placeholder="ingrese un numero"/>
+        <Entry  Text="{Binding SegundoNumero}" Placeholder="ingrese un numero" />
+        <Button Command="{Binding sumar}" Text="sumar"></Button>
+        <Button Command="{Binding Resta}" Text="restar"></Button>
+        <Button Command="{Binding multiplicar}" Text="multiplicar"></Button>
+        <Button Command="{Binding division}" Text="dividir"></Button>
+        <Label Text="{Binding Proyeccion}" ></Label>
+        
+    </StackLayout>
+
+</ContentPage>
