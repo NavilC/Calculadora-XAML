@@ -18,7 +18,7 @@
         <Button Command="{Binding Resta}" Text="restar"></Button>
         <Button Command="{Binding multiplicar}" Text="multiplicar"></Button>
         <Button Command="{Binding division}" Text="dividir"></Button>
-        <Label Text="{Binding Proyeccion}" ></Label>
+        <Label Text="{Binding Proyeccion}" HorizontalTextAlignment="Center" ></Label>
         
     </StackLayout>
 

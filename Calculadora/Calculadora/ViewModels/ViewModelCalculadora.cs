@@ -15,6 +15,7 @@ namespace Calculadora.ViewModels
 
         public ViewModelCalculadora()
         {
+            
             sumar = new Command(() =>
             {
                 Calculadoras calculadora = new Calculadoras()
@@ -22,7 +23,7 @@ namespace Calculadora.ViewModels
                     primerNumero = this.primerNumero,
                     segundoNumero = this.segundoNumero,
                 };
-                proyeccion = calculadora.sumar().ToString();
+                Proyeccion = calculadora.sumar().ToString();
             });
 
             Resta = new Command(() =>
@@ -32,7 +33,7 @@ namespace Calculadora.ViewModels
                     primerNumero = this.primerNumero,
                     segundoNumero = this.segundoNumero,
                 };
-                proyeccion = calculadora.Resta().ToString();
+                Proyeccion = calculadora.Resta().ToString();
             });
 
             division = new Command(() =>
@@ -42,7 +43,7 @@ namespace Calculadora.ViewModels
                     primerNumero = this.primerNumero,
                     segundoNumero = this.segundoNumero,
                 };
-                proyeccion = calculadora.division().ToString();
+                Proyeccion = calculadora.division().ToString();
             });
 
             multiplicar = new Command(() =>
@@ -52,7 +53,7 @@ namespace Calculadora.ViewModels
                     primerNumero = this.primerNumero,
                     segundoNumero = this.segundoNumero,
                 };
-                proyeccion = calculadora.multiplicar().ToString();
+                Proyeccion = calculadora.multiplicar().ToString();
             });
         }
 
@@ -86,6 +87,7 @@ namespace Calculadora.ViewModels
                 PropertyChanged?.Invoke(this, argsEvent);
             }
         }
+
         public Command sumar { get; }
         public Command Resta { get; }
         public Command division { get; }
