@@ -9,7 +9,7 @@ namespace Calculadora.ViewModels
 {
     public class ViewModelCalculadora : INotifyPropertyChanged
     {
-        int primerNumero;      
+        int primerNumero;
         int segundoNumero;
         string proyeccion;
 
@@ -66,7 +66,8 @@ namespace Calculadora.ViewModels
                 PropertyChanged?.Invoke(this, argsEvent);
             }
         }
-        public int PrimerNumero{
+        public int PrimerNumero
+        {
             get => primerNumero;
             set
             {
@@ -81,7 +82,7 @@ namespace Calculadora.ViewModels
             set
             {
                 segundoNumero = value;
-                var argsEvent = new PropertyChangedEventArgs(nameof (SegundoNumero));
+                var argsEvent = new PropertyChangedEventArgs(nameof(SegundoNumero));
                 PropertyChanged?.Invoke(this, argsEvent);
             }
         }
@@ -92,5 +93,6 @@ namespace Calculadora.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
     }
+}
    
 
